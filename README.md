@@ -2,7 +2,7 @@
 The Kaggle dataset is a synthetic collection of information of 1500 individuals diagnosed with Obsessive-Compulsive Disorder (OCD).
 
 ## Project Overview
-This project focuses on an OCD patient dataset using **MySQL** to discover patterns in diagnosis and treatment. The analysis explores how demographic factors such as age, gender, ethnicity, marital status, and education level relate to depression and anxiety — showcasing trends over time, medication usage and other associated factors.
+This project focuses on an OCD patient dataset using **SQL** to discover patterns in diagnosis and treatment. The analysis explores how demographic factors such as age, gender, ethnicity, marital status, and education level relate to depression and anxiety — showcasing trends over time, medication usage and other associated factors.
 
 This project uses patient data to demonstrate how **SQL can be used to make data-driven decisions in mental health research**, answer real-world questions, and extract meaningful insights from structured data.
 
@@ -50,6 +50,7 @@ The data consists of 1500 rows, 1393 unique patient rows and 107 duplicate rows.
 | anxiety_diagnosis              | Treatment response to anxiety          | Text      |
 | medications                    | Prescribed medications                 | Text      |
 
+Data Source: kaggle [here](https://www.kaggle.com/datasets/ohinhaque/ocd-patient-dataset-demographics-and-clinical-data)
 
 ## Tools used
 - MySQL
@@ -169,5 +170,4 @@ Additionally, Asian patients had the highest history of PTSD (82), compared with
 
 Overall, the project highlights the importance of **SQL** in **healthcare analysis** and serves as a foundation for more advanced data analytical projects. 
 
-## Data Source
-kaggle [here](https://www.kaggle.com/datasets/ohinhaque/ocd-patient-dataset-demographics-and-clinical-data)
+
