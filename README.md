@@ -65,8 +65,8 @@ SELECT
 FROM dataset
 GROUP BY year
 ORDER BY monthly_distinct_visits DESC;
--- 2018: 203, 2022: 139, 2013: 18
 ```
+- *2018: 203, 2022: 139, 2013: 18*
 
 
 #### 2. Next, let's investigate the 2018 spike. What types of medications were administered during the highest and lowest year visits?
@@ -80,11 +80,9 @@ FROM dataset
 		AND medications <> 'None'
 GROUP BY year, medications
 ORDER BY monthly_distinct_visits DESC;
-
--- Benzodiazepine is the most used medication used in 2018 (58)
--- SSRI is the most used medication in 2013 (8)
 ```
-
+- *Benzodiazepine is the most used medication used in 2018 (58)*
+- *SSRI is the most used medication in 2013 (8)*
 
 #### 3. In addition, Benzodiazepine looks to be the most used, is this the same medication for genders?
 ```sql
@@ -96,10 +94,9 @@ FROM dataset
 	WHERE medications <> 'None'
 GROUP BY gender, medications
 ORDER BY prescription_count DESC;
--- Male: Benzodiazepine (198)
--- Female: SNRI (192)
 ```
-
+- *Male: Benzodiazepine (198)*
+- *Female: SNRI (192)*
 
 #### 4. Can you pull the data on the most frequently prescribed medication among patients of Hispanic ethnicity?
 ```sql
@@ -112,9 +109,8 @@ FROM dataset
 		AND medications <> 'None'
 GROUP BY gender, medications
 ORDER BY gender, prescription_count DESC;
--- Female: SNRI (58), Male: Benzodiazepine (53)
 ```
-
+- *Female: SNRI (58), Male: Benzodiazepine (53)*
 
 ####  5. I'd love to see the top ethnicity diagnosed with PTSD?
 ```sql
@@ -125,9 +121,8 @@ FROM dataset
 	WHERE previous_diagnoses LIKE '%PTSD%'
 GROUP BY ethnicity
 ORDER BY ptsd_count DESC;
--- Asian: 82
 ```
-
+- *Asian: 82*
 
 #### 6. Can you pull the data on MDD females who visited before 2022-02-10?
 ```sql
@@ -137,9 +132,8 @@ FROM dataset
 	WHERE gender = 'Female'
 		AND previous_diagnoses LIKE '%MDD%'
 		AND ocd_diagnosis_date < '2022-02-10';
-  -- MDD females: 149
-  ```
-
+```
+ - *MDD females: 149*
 
 #### 7. I'd like to see the number of high school patients with anxiety by gender? 
 ```sql
@@ -151,9 +145,9 @@ FROM dataset
 		AND anxiety_diagnosis = 'Yes'
 GROUP BY gender
 ORDER BY 2 DESC;
--- Male: 90
--- Female: 83
 ```
+- *Male: 90*
+- *Female: 83*
 
 ## Key Insights
 - Patient visits peaked in **2018**.
